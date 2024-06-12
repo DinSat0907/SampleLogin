@@ -31,7 +31,7 @@ jobs:
           ${{ runner.os }}-maven-
 
     - name: Run Karate tests
-      run: mvn test -Demail=dineshkumar@innocloud.co.in -Dpassword=Dlb0907@@@ -Dheadless=
+      run: mvn test -Demail=dineshkumar@innocloud.co.in -Dpassword=Dlb0907@@@ -Dheadless=--headless=new
 
     - name: Archive test results
       uses: actions/upload-artifact@v2
