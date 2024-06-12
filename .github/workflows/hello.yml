@@ -1,4 +1,5 @@
 name: Hello
+
 on: push
 
 jobs:
@@ -7,4 +8,4 @@ jobs:
 
     steps:
     - name: primt hello world
-    run: echo "Hellow world 1"
+    - run: echo "Hellow world 1"
