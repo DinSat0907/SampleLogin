@@ -8,5 +8,4 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: primt hello world
-    - run: echo "Hellow world 1"
+      - run: echo "Hellow world 1"
