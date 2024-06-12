@@ -7,4 +7,4 @@ jobs:
 
     steps:
     - name: primt hello world
-    run: echo "Hellow world"
+    run: echo "Hellow world 1"
