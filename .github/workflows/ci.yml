@@ -30,6 +30,9 @@ jobs:
       uses: stCarolas/setup-maven@v5
       with:
         maven-version: 3.8.7
+        
+    - name: mvn install
+      run: mvn clean imstall
 
     - name: mvn run
       run: mvn test -Demail=dineshkumar@innocloud.co.in -Dpassword=Dlb0907@@@ -Dheadless=--headless=new
