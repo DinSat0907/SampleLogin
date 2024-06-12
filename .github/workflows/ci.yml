@@ -1,33 +1,49 @@
 name: Karate UI Tests
 
 on:
-  workflow_dispatch:
-
-# env:
-#   EMAIL: ${{ secrets.email }}
-#   PASSWORD: ${{ secrets.password }}
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  test:
+  karate-tests:
     runs-on: ubuntu-latest
 
     steps:
-      - name: clone repo
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: setup
-      - uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin' # See 'Supported distributions' for available options
-          java-version: '21'
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '11'
 
-      - name: Set up Maven
-        uses: stCarolas/setup-maven@v5
-        with:
-          maven-version: 3.8.7
-        
-      - name: mvn install
-      - run: mvn clean imstall
+    - name: Cache Maven packages
+      uses: actions/cache@v2
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
 
-      - name: mvn run
-      - run: mvn test -Demail=dineshkumar@innocloud.co.in -Dpassword=Dlb0907@@@ -Dheadless=--headless=new
+    - name: Install dependencies
+      run: mvn install -DskipTests
+
+    - name: Run Karate tests
+      run: mvn test -Demail=dineshkumar@innocloud.co.in -Dpassword=Dlb0907@@@ -Dheadless=--headless=new
+
+    - name: Archive test results
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-results
+        path: target/surefire-reports/*.xml
+
+    - name: Archive Karate reports
+      uses: actions/upload-artifact@v2
+      with:
+        name: karate-reports
+        path: target/karate-reports/*.html
