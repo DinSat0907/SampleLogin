@@ -1,0 +1,10 @@
+name: Hello
+on: push
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: primt hello world
+    run: echo "Hellow world"
