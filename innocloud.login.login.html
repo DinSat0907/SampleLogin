@@ -1,0 +1,3552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"05d164ad-f6ae-443f-b4ef-cc5a1190a415",karate_version:"1.4.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>innocloud.login.login</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">8</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2024-06-13 10:38:57 AM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:6]"><span>[1:6]</span> <span>Invalid Login with no appropriate HTTP Headers</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2:23]"><span>[2:23]</span> <span>InValid Login with no ClientId</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[3:42]"><span>[3:42]</span> <span>InValid Login with no UserName and no Password</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[4:60]"><span>[4:60]</span> <span>InValid Login with no Password</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[5:79]"><span>[5:79]</span> <span>InValid Login with no UserName</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[6:98]"><span>[6:98]</span> <span>InValid Login with incorrect UserName</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[7:117]"><span>[7:117]</span> <span>InValid Login with incorrect Password</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[8:136]"><span>[8:136]</span> <span>Valid Login with apropriate HTTP Headers, ClintId, UserName, Password</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">innocloud/login/login.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Test Login API</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:6]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:6]</span>
+                <span class="scenario-name">Invalid Login with no appropriate HTTP Headers</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>879</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:6]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:6]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url innoCloudPostServices</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">10:38:56.351 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref passed">8</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>request { &quot;AuthFlow&quot;: &quot;USER_PASSWORD_AUTH&quot;, &quot;ClientId&quot;: #(clientId), &quot;AuthParameters&quot;: { &quot;USERNAME&quot;: #(username), &quot;PASSWORD&quot;: #(password)}}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">37</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header User-Agent = &#39;PostmanRuntime/7.39.0&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept-Encoding = &#39;gzip, deflate, br&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Connection = &#39;keep-alive&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref passed">15</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">816</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.15">10:38:56.659 request:
+1 &gt; POST https://cognito-idp.eu-west-2.amazonaws.com/
+1 &gt; User-Agent: PostmanRuntime/7.39.0
+1 &gt; Accept: */*
+1 &gt; Accept-Encoding: gzip, deflate, br
+1 &gt; Connection: keep-alive
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 157
+1 &gt; Host: cognito-idp.eu-west-2.amazonaws.com
+{&quot;AuthFlow&quot;:&quot;USER_PASSWORD_AUTH&quot;,&quot;ClientId&quot;:&quot;6prsm50eflpmog3p68mte57iv6&quot;,&quot;AuthParameters&quot;:{&quot;USERNAME&quot;:&quot;dineshkumar@innocloud.co.in&quot;,&quot;PASSWORD&quot;:&quot;Dlb0907@@@&quot;}}
+
+10:38:57.237 response time in milliseconds: 575
+1 &lt; 200
+1 &lt; Date: Thu, 13 Jun 2024 10:38:57 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 90
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: c8acdc62-747c-41df-b28e-e58b0b6ce1b0
+{&quot;Output&quot;:{&quot;__type&quot;:&quot;com.amazon.coral.service#UnknownOperationException&quot;},&quot;Version&quot;:&quot;1.0&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref passed">16</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref passed">17</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">7</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.17">10:38:57.250 [print] {
+  &quot;Output&quot;: {
+    &quot;__type&quot;: &quot;com.amazon.coral.service#UnknownOperationException&quot;
+  },
+  &quot;Version&quot;: &quot;1.0&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.Output.__type == &quot;com.amazon.coral.service#UnknownOperationException&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">13</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.Version == &quot;1.0&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:23]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:23]</span>
+                <span class="scenario-name">InValid Login with no ClientId</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>874</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:23]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:23]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url innoCloudPostServices</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">10:38:56.352 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>request { &quot;AuthFlow&quot;: &quot;USER_PASSWORD_AUTH&quot;, &quot;ClientId&quot;: &quot;&quot;, &quot;AuthParameters&quot;: { &quot;USERNAME&quot;: #(username), &quot;PASSWORD&quot;: #(password)}}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">35</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header User-Agent = &#39;PostmanRuntime/7.39.0&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.28">
+      <div class="step-ref passed">28</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.29">
+      <div class="step-ref passed">29</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept-Encoding = &#39;gzip, deflate, br&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.30">
+      <div class="step-ref passed">30</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Connection = &#39;keep-alive&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header X-Amz-Target = &#39;AWSCognitoIdentityProviderService.InitiateAuth&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.32">
+      <div class="step-ref passed">32</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/x-amz-json-1.1&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">812</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.34">10:38:56.659 request:
+1 &gt; POST https://cognito-idp.eu-west-2.amazonaws.com/
+1 &gt; User-Agent: PostmanRuntime/7.39.0
+1 &gt; Accept: */*
+1 &gt; Accept-Encoding: gzip, deflate, br
+1 &gt; Connection: keep-alive
+1 &gt; X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth
+1 &gt; Content-Type: application/x-amz-json-1.1; charset=UTF-8
+1 &gt; Content-Length: 131
+1 &gt; Host: cognito-idp.eu-west-2.amazonaws.com
+{&quot;AuthFlow&quot;:&quot;USER_PASSWORD_AUTH&quot;,&quot;ClientId&quot;:&quot;&quot;,&quot;AuthParameters&quot;:{&quot;USERNAME&quot;:&quot;dineshkumar@innocloud.co.in&quot;,&quot;PASSWORD&quot;:&quot;Dlb0907@@@&quot;}}
+
+10:38:57.237 response time in milliseconds: 575
+1 &lt; 400
+1 &lt; Date: Thu, 13 Jun 2024 10:38:57 GMT
+1 &lt; Content-Type: application/x-amz-json-1.1
+1 &lt; Content-Length: 294
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: 16a4a8cf-081f-4222-a920-3e7114def11b
+1 &lt; x-amzn-ErrorType: InvalidParameterException:
+1 &lt; x-amzn-ErrorMessage: 2 validation errors detected: Value &#39;&#39; at &#39;clientId&#39; failed to satisfy constraint: Member must have length greater than or equal to 1; Value &#39;&#39; at &#39;clientId&#39; failed to satisfy constraint: Member must satisfy regular expression pattern: [\w+]+
+{&quot;__type&quot;:&quot;InvalidParameterException&quot;,&quot;message&quot;:&quot;2 validation errors detected: Value &#39;&#39; at &#39;clientId&#39; failed to satisfy constraint: Member must have length greater than or equal to 1; Value &#39;&#39; at &#39;clientId&#39; failed to satisfy constraint: Member must satisfy regular expression pattern: [\\w+]+&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">16</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.36">10:38:57.255 [print] {
+  &quot;__type&quot;: &quot;InvalidParameterException&quot;,
+  &quot;message&quot;: &quot;2 validation errors detected: Value &#39;&#39; at &#39;clientId&#39; failed to satisfy constraint: Member must have length greater than or equal to 1; Value &#39;&#39; at &#39;clientId&#39; failed to satisfy constraint: Member must satisfy regular expression pattern: [\\w+]+&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.38">
+      <div class="step-ref passed">38</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.__type == &quot;InvalidParameterException&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.39">
+      <div class="step-ref passed">39</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.message == &quot;2 validation errors detected: Value &#39;&#39; at &#39;clientId&#39; failed to satisfy constraint: Member must have length greater than or equal to 1; Value &#39;&#39; at &#39;clientId&#39; failed to satisfy constraint: Member must satisfy regular expression pattern: [\\w+]+&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:42]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:42]</span>
+                <span class="scenario-name">InValid Login with no UserName and no Password</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>891</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:42]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url innoCloudPostServices</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">10:38:56.351 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.43">
+      <div class="step-ref passed">43</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>request { &quot;AuthFlow&quot;: &quot;USER_PASSWORD_AUTH&quot;, &quot;ClientId&quot;: #(clientId), &quot;AuthParameters&quot;: { &quot;USERNAME&quot;: &quot;&quot;, &quot;PASSWORD&quot;: &quot;&quot;}}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">30</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.45">
+      <div class="step-ref passed">45</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header User-Agent = &#39;PostmanRuntime/7.39.0&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.46">
+      <div class="step-ref passed">46</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.47">
+      <div class="step-ref passed">47</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept-Encoding = &#39;gzip, deflate, br&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.48">
+      <div class="step-ref passed">48</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Connection = &#39;keep-alive&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.49">
+      <div class="step-ref passed">49</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header X-Amz-Target = &#39;AWSCognitoIdentityProviderService.InitiateAuth&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/x-amz-json-1.1&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">854</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.52">10:38:56.659 request:
+1 &gt; POST https://cognito-idp.eu-west-2.amazonaws.com/
+1 &gt; User-Agent: PostmanRuntime/7.39.0
+1 &gt; Accept: */*
+1 &gt; Accept-Encoding: gzip, deflate, br
+1 &gt; Connection: keep-alive
+1 &gt; X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth
+1 &gt; Content-Type: application/x-amz-json-1.1; charset=UTF-8
+1 &gt; Content-Length: 120
+1 &gt; Host: cognito-idp.eu-west-2.amazonaws.com
+{&quot;AuthFlow&quot;:&quot;USER_PASSWORD_AUTH&quot;,&quot;ClientId&quot;:&quot;6prsm50eflpmog3p68mte57iv6&quot;,&quot;AuthParameters&quot;:{&quot;USERNAME&quot;:&quot;&quot;,&quot;PASSWORD&quot;:&quot;&quot;}}
+
+10:38:57.277 response time in milliseconds: 618
+1 &lt; 400
+1 &lt; Date: Thu, 13 Jun 2024 10:38:57 GMT
+1 &lt; Content-Type: application/x-amz-json-1.1
+1 &lt; Content-Length: 86
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: 21f9b9e1-a7e5-49b7-98a6-38cb3b76e0fd
+1 &lt; x-amzn-ErrorType: InvalidParameterException:
+1 &lt; x-amzn-ErrorMessage: Missing required parameter USERNAME
+{&quot;__type&quot;:&quot;InvalidParameterException&quot;,&quot;message&quot;:&quot;Missing required parameter USERNAME&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.53">
+      <div class="step-ref passed">53</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.54">
+      <div class="step-ref passed">54</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.54">10:38:57.280 [print] {
+  &quot;__type&quot;: &quot;InvalidParameterException&quot;,
+  &quot;message&quot;: &quot;Missing required parameter USERNAME&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.56">
+      <div class="step-ref passed">56</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.__type == &quot;InvalidParameterException&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.57">
+      <div class="step-ref passed">57</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.message == &quot;Missing required parameter USERNAME&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:60]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:60]</span>
+                <span class="scenario-name">InValid Login with no Password</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>881</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4:60]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url innoCloudPostServices</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">10:38:56.352 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.62">
+      <div class="step-ref passed">62</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>request { &quot;AuthFlow&quot;: &quot;USER_PASSWORD_AUTH&quot;, &quot;ClientId&quot;: #(clientId), &quot;AuthParameters&quot;: { &quot;USERNAME&quot;: #(username), &quot;PASSWORD&quot;: &quot;&quot;}}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">35</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.64">
+      <div class="step-ref passed">64</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header User-Agent = &#39;PostmanRuntime/7.39.0&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.65">
+      <div class="step-ref passed">65</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.66">
+      <div class="step-ref passed">66</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept-Encoding = &#39;gzip, deflate, br&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.67">
+      <div class="step-ref passed">67</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Connection = &#39;keep-alive&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.68">
+      <div class="step-ref passed">68</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header X-Amz-Target = &#39;AWSCognitoIdentityProviderService.InitiateAuth&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.69">
+      <div class="step-ref passed">69</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/x-amz-json-1.1&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.71">
+      <div class="step-ref passed">71</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">832</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.71">10:38:56.659 request:
+1 &gt; POST https://cognito-idp.eu-west-2.amazonaws.com/
+1 &gt; User-Agent: PostmanRuntime/7.39.0
+1 &gt; Accept: */*
+1 &gt; Accept-Encoding: gzip, deflate, br
+1 &gt; Connection: keep-alive
+1 &gt; X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth
+1 &gt; Content-Type: application/x-amz-json-1.1; charset=UTF-8
+1 &gt; Content-Length: 147
+1 &gt; Host: cognito-idp.eu-west-2.amazonaws.com
+{&quot;AuthFlow&quot;:&quot;USER_PASSWORD_AUTH&quot;,&quot;ClientId&quot;:&quot;6prsm50eflpmog3p68mte57iv6&quot;,&quot;AuthParameters&quot;:{&quot;USERNAME&quot;:&quot;dineshkumar@innocloud.co.in&quot;,&quot;PASSWORD&quot;:&quot;&quot;}}
+
+10:38:57.256 response time in milliseconds: 596
+1 &lt; 400
+1 &lt; Date: Thu, 13 Jun 2024 10:38:57 GMT
+1 &lt; Content-Type: application/x-amz-json-1.1
+1 &lt; Content-Length: 86
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: 2e806a9d-e776-48c7-9e56-8b850b40688f
+1 &lt; x-amzn-ErrorType: InvalidParameterException:
+1 &lt; x-amzn-ErrorMessage: Missing required parameter PASSWORD
+{&quot;__type&quot;:&quot;InvalidParameterException&quot;,&quot;message&quot;:&quot;Missing required parameter PASSWORD&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.72">
+      <div class="step-ref passed">72</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.73">
+      <div class="step-ref passed">73</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.73">10:38:57.259 [print] {
+  &quot;__type&quot;: &quot;InvalidParameterException&quot;,
+  &quot;message&quot;: &quot;Missing required parameter PASSWORD&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.75">
+      <div class="step-ref passed">75</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.__type == &quot;InvalidParameterException&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.76">
+      <div class="step-ref passed">76</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.message == &quot;Missing required parameter PASSWORD&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5:79]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5:79]</span>
+                <span class="scenario-name">InValid Login with no UserName</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>879</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5:79]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5:79]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url innoCloudPostServices</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">10:38:56.351 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.81">
+      <div class="step-ref passed">81</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>request { &quot;AuthFlow&quot;: &quot;USER_PASSWORD_AUTH&quot;, &quot;ClientId&quot;: #(clientId), &quot;AuthParameters&quot;: { &quot;USERNAME&quot;: &quot;&quot;, &quot;PASSWORD&quot;: #(password)}}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">36</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.83">
+      <div class="step-ref passed">83</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header User-Agent = &#39;PostmanRuntime/7.39.0&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.84">
+      <div class="step-ref passed">84</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.85">
+      <div class="step-ref passed">85</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept-Encoding = &#39;gzip, deflate, br&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Connection = &#39;keep-alive&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header X-Amz-Target = &#39;AWSCognitoIdentityProviderService.InitiateAuth&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.88">
+      <div class="step-ref passed">88</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/x-amz-json-1.1&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.90">
+      <div class="step-ref passed">90</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">822</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.90">10:38:56.658 request:
+1 &gt; POST https://cognito-idp.eu-west-2.amazonaws.com/
+1 &gt; User-Agent: PostmanRuntime/7.39.0
+1 &gt; Accept: */*
+1 &gt; Accept-Encoding: gzip, deflate, br
+1 &gt; Connection: keep-alive
+1 &gt; X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth
+1 &gt; Content-Type: application/x-amz-json-1.1; charset=UTF-8
+1 &gt; Content-Length: 130
+1 &gt; Host: cognito-idp.eu-west-2.amazonaws.com
+{&quot;AuthFlow&quot;:&quot;USER_PASSWORD_AUTH&quot;,&quot;ClientId&quot;:&quot;6prsm50eflpmog3p68mte57iv6&quot;,&quot;AuthParameters&quot;:{&quot;USERNAME&quot;:&quot;&quot;,&quot;PASSWORD&quot;:&quot;Dlb0907@@@&quot;}}
+
+10:38:57.248 response time in milliseconds: 588
+1 &lt; 400
+1 &lt; Date: Thu, 13 Jun 2024 10:38:57 GMT
+1 &lt; Content-Type: application/x-amz-json-1.1
+1 &lt; Content-Length: 86
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: 78e9385f-e241-48e0-8761-acd8670d4aaa
+1 &lt; x-amzn-ErrorType: InvalidParameterException:
+1 &lt; x-amzn-ErrorMessage: Missing required parameter USERNAME
+{&quot;__type&quot;:&quot;InvalidParameterException&quot;,&quot;message&quot;:&quot;Missing required parameter USERNAME&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.91">
+      <div class="step-ref passed">91</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.92">
+      <div class="step-ref passed">92</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.92">10:38:57.251 [print] {
+  &quot;__type&quot;: &quot;InvalidParameterException&quot;,
+  &quot;message&quot;: &quot;Missing required parameter USERNAME&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.94">
+      <div class="step-ref passed">94</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.__type == &quot;InvalidParameterException&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">12</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.95">
+      <div class="step-ref passed">95</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.message == &quot;Missing required parameter USERNAME&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[6:98]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[6:98]</span>
+                <span class="scenario-name">InValid Login with incorrect UserName</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>397</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[6:98]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[6:98]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url innoCloudPostServices</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">10:38:57.276 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.100">
+      <div class="step-ref passed">100</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>request { &quot;AuthFlow&quot;: &quot;USER_PASSWORD_AUTH&quot;, &quot;ClientId&quot;: #(clientId), &quot;AuthParameters&quot;: { &quot;USERNAME&quot;: #(user), &quot;PASSWORD&quot;: #(password)}}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">17</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.102">
+      <div class="step-ref passed">102</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header User-Agent = &#39;PostmanRuntime/7.39.0&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.103">
+      <div class="step-ref passed">103</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.104">
+      <div class="step-ref passed">104</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept-Encoding = &#39;gzip, deflate, br&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.105">
+      <div class="step-ref passed">105</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Connection = &#39;keep-alive&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.106">
+      <div class="step-ref passed">106</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header X-Amz-Target = &#39;AWSCognitoIdentityProviderService.InitiateAuth&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.107">
+      <div class="step-ref passed">107</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/x-amz-json-1.1&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.109">
+      <div class="step-ref passed">109</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">375</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.109">10:38:57.301 request:
+1 &gt; POST https://cognito-idp.eu-west-2.amazonaws.com/
+1 &gt; User-Agent: PostmanRuntime/7.39.0
+1 &gt; Accept: */*
+1 &gt; Accept-Encoding: gzip, deflate, br
+1 &gt; Connection: keep-alive
+1 &gt; X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth
+1 &gt; Content-Type: application/x-amz-json-1.1; charset=UTF-8
+1 &gt; Content-Length: 137
+1 &gt; Host: cognito-idp.eu-west-2.amazonaws.com
+{&quot;AuthFlow&quot;:&quot;USER_PASSWORD_AUTH&quot;,&quot;ClientId&quot;:&quot;6prsm50eflpmog3p68mte57iv6&quot;,&quot;AuthParameters&quot;:{&quot;USERNAME&quot;:&quot;#(user)&quot;,&quot;PASSWORD&quot;:&quot;Dlb0907@@@&quot;}}
+
+10:38:57.672 response time in milliseconds: 371
+1 &lt; 400
+1 &lt; Date: Thu, 13 Jun 2024 10:38:57 GMT
+1 &lt; Content-Type: application/x-amz-json-1.1
+1 &lt; Content-Length: 67
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: 7c9a9686-deca-4cb8-acc2-e5b3842e0b97
+1 &lt; x-amzn-ErrorType: UserNotFoundException:
+1 &lt; x-amzn-ErrorMessage: User does not exist.
+{&quot;__type&quot;:&quot;UserNotFoundException&quot;,&quot;message&quot;:&quot;User does not exist.&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.110">
+      <div class="step-ref passed">110</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.111">
+      <div class="step-ref passed">111</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.111">10:38:57.674 [print] {
+  &quot;__type&quot;: &quot;UserNotFoundException&quot;,
+  &quot;message&quot;: &quot;User does not exist.&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.113">
+      <div class="step-ref passed">113</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.__type == &quot;UserNotFoundException&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.114">
+      <div class="step-ref passed">114</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.message == &quot;User does not exist.&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[7:117]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[7:117]</span>
+                <span class="scenario-name">InValid Login with incorrect Password</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>536</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[7:117]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[7:117]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url innoCloudPostServices</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">10:38:57.293 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.119">
+      <div class="step-ref passed">119</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>request { &quot;AuthFlow&quot;: &quot;USER_PASSWORD_AUTH&quot;, &quot;ClientId&quot;: #(clientId), &quot;AuthParameters&quot;: { &quot;USERNAME&quot;: #(username), &quot;PASSWORD&quot;: #(pass)}}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.121">
+      <div class="step-ref passed">121</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header User-Agent = &#39;PostmanRuntime/7.39.0&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.122">
+      <div class="step-ref passed">122</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.123">
+      <div class="step-ref passed">123</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept-Encoding = &#39;gzip, deflate, br&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.124">
+      <div class="step-ref passed">124</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Connection = &#39;keep-alive&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.125">
+      <div class="step-ref passed">125</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header X-Amz-Target = &#39;AWSCognitoIdentityProviderService.InitiateAuth&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.126">
+      <div class="step-ref passed">126</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/x-amz-json-1.1&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.128">
+      <div class="step-ref passed">128</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">530</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.128">10:38:57.302 request:
+1 &gt; POST https://cognito-idp.eu-west-2.amazonaws.com/
+1 &gt; User-Agent: PostmanRuntime/7.39.0
+1 &gt; Accept: */*
+1 &gt; Accept-Encoding: gzip, deflate, br
+1 &gt; Connection: keep-alive
+1 &gt; X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth
+1 &gt; Content-Type: application/x-amz-json-1.1; charset=UTF-8
+1 &gt; Content-Length: 154
+1 &gt; Host: cognito-idp.eu-west-2.amazonaws.com
+{&quot;AuthFlow&quot;:&quot;USER_PASSWORD_AUTH&quot;,&quot;ClientId&quot;:&quot;6prsm50eflpmog3p68mte57iv6&quot;,&quot;AuthParameters&quot;:{&quot;USERNAME&quot;:&quot;dineshkumar@innocloud.co.in&quot;,&quot;PASSWORD&quot;:&quot;#(pass)&quot;}}
+
+10:38:57.830 response time in milliseconds: 527
+1 &lt; 400
+1 &lt; Date: Thu, 13 Jun 2024 10:38:57 GMT
+1 &lt; Content-Type: application/x-amz-json-1.1
+1 &lt; Content-Length: 79
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: c79216e6-e798-4601-84f1-bd5ac14b233c
+1 &lt; x-amzn-ErrorType: NotAuthorizedException:
+1 &lt; x-amzn-ErrorMessage: Incorrect username or password.
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.129">
+      <div class="step-ref passed">129</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.130">
+      <div class="step-ref passed">130</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.130">10:38:57.831 [print] {
+  &quot;__type&quot;: &quot;NotAuthorizedException&quot;,
+  &quot;message&quot;: &quot;Incorrect username or password.&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.132">
+      <div class="step-ref passed">132</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.__type == &quot;NotAuthorizedException&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.133">
+      <div class="step-ref passed">133</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.message == &quot;Incorrect username or password.&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[8:136]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[8:136]</span>
+                <span class="scenario-name">Valid Login with apropriate HTTP Headers, ClintId, UserName, Password</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>604</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[8:136]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[8:136]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url innoCloudPostServices</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">10:38:57.283 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.138">
+      <div class="step-ref passed">138</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>request { &quot;AuthFlow&quot;: &quot;USER_PASSWORD_AUTH&quot;, &quot;ClientId&quot;: #(clientId), &quot;AuthParameters&quot;: { &quot;USERNAME&quot;: #(username), &quot;PASSWORD&quot;: #(password)}}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.140">
+      <div class="step-ref passed">140</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header User-Agent = &#39;PostmanRuntime/7.39.0&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.141">
+      <div class="step-ref passed">141</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;*/*&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.142">
+      <div class="step-ref passed">142</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept-Encoding = &#39;gzip, deflate, br&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.143">
+      <div class="step-ref passed">143</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Connection = &#39;keep-alive&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.144">
+      <div class="step-ref passed">144</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header X-Amz-Target = &#39;AWSCognitoIdentityProviderService.InitiateAuth&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.145">
+      <div class="step-ref passed">145</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/x-amz-json-1.1&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.147">
+      <div class="step-ref passed">147</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">587</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.147">10:38:57.297 request:
+1 &gt; POST https://cognito-idp.eu-west-2.amazonaws.com/
+1 &gt; User-Agent: PostmanRuntime/7.39.0
+1 &gt; Accept: */*
+1 &gt; Accept-Encoding: gzip, deflate, br
+1 &gt; Connection: keep-alive
+1 &gt; X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth
+1 &gt; Content-Type: application/x-amz-json-1.1; charset=UTF-8
+1 &gt; Content-Length: 157
+1 &gt; Host: cognito-idp.eu-west-2.amazonaws.com
+{&quot;AuthFlow&quot;:&quot;USER_PASSWORD_AUTH&quot;,&quot;ClientId&quot;:&quot;6prsm50eflpmog3p68mte57iv6&quot;,&quot;AuthParameters&quot;:{&quot;USERNAME&quot;:&quot;dineshkumar@innocloud.co.in&quot;,&quot;PASSWORD&quot;:&quot;Dlb0907@@@&quot;}}
+
+10:38:57.881 response time in milliseconds: 583
+1 &lt; 200
+1 &lt; Date: Thu, 13 Jun 2024 10:38:57 GMT
+1 &lt; Content-Type: application/x-amz-json-1.1
+1 &lt; Content-Length: 4561
+1 &lt; Connection: keep-alive
+1 &lt; x-amzn-RequestId: 39288e66-1b22-4f34-8997-31c59b755378
+{&quot;AuthenticationResult&quot;:{&quot;AccessToken&quot;:&quot;eyJraWQiOiJHYVFSaW8zNExCUlVSaUhwdlI2SExpKzU3ZXp4WkxJZWZ3VXJtR3ArOERZPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhNjQyYTI0NC03MDAxLTcwOTgtYzdjZC03M2I1NzgxNDI4ZWMiLCJkZXZpY2Vfa2V5IjoiZXUtd2VzdC0yXzJkOWU0NjdlLWUxYzUtNGZmNy1hMmQxLTliNzQ2ZjExMWNhZCIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5ldS13ZXN0LTIuYW1hem9uYXdzLmNvbVwvZXUtd2VzdC0yX1BsaGJYeEtCdyIsImNsaWVudF9pZCI6IjZwcnNtNTBlZmxwbW9nM3A2OG10ZTU3aXY2Iiwib3JpZ2luX2p0aSI6IjJiYmIyMTE4LWEzMzctNDViOC05YjhkLTIzNTkxNjlmN2I4ZiIsImV2ZW50X2lkIjoiMzkyODhlNjYtMWIyMi00ZjM0LTg5OTctMzFjNTliNzU1Mzc4IiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTcxODI3NTEzNywiZXhwIjoxNzE4Mjc4NzM3LCJpYXQiOjE3MTgyNzUxMzcsImp0aSI6IjMzNjc5N2MyLTMwMzgtNGQ3Ni05ZjViLWM1NDU0NTU2OGY3MyIsInVzZXJuYW1lIjoiYTY0MmEyNDQtNzAwMS03MDk4LWM3Y2QtNzNiNTc4MTQyOGVjIn0.Inilw5AwRb4QgOOWYcsIcd7IeFVMwYuEHJjAeyWuoJHS3uLPr4-dQOymj-mk0A9sltN1N2p_uXSDqDyFCoQCvn-ybusVKWvyrkS1l-uLmYys0FQs25nysGOqTSRT9LOQ7Ka1N0wX7hhVmpdA37wSfn_yETe0-W5s99-fld-XuTkofkKGFuJl9Ofw3Ge_5HC9tXxQy3nXQXlREqLYR0fmlgM4KnyRPhX8DNN2ZxAJfrOrUxKkEr_XCJtRAp6cs6B8nomRLjdVx0GUMUQgqLaRS_zS-l0gwSmTGLkbxGpk6o27LExOvQCw4RAJljxXXBWPbTfbOR85UwXfPqWzPjGzEg&quot;,&quot;ExpiresIn&quot;:3600,&quot;IdToken&quot;:&quot;eyJraWQiOiIzRWxRZHdtSzlqaXZDaExyOVRZVzE0bHhoUmE1MXF1dkJpakF4TTRRZ2g4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhNjQyYTI0NC03MDAxLTcwOTgtYzdjZC03M2I1NzgxNDI4ZWMiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmV1LXdlc3QtMi5hbWF6b25hd3MuY29tXC9ldS13ZXN0LTJfUGxoYlh4S0J3IiwicGhvbmVfbnVtYmVyX3ZlcmlmaWVkIjp0cnVlLCJjb2duaXRvOnVzZXJuYW1lIjoiYTY0MmEyNDQtNzAwMS03MDk4LWM3Y2QtNzNiNTc4MTQyOGVjIiwiZ2l2ZW5fbmFtZSI6IkRpbmVzaCBLdW1hciIsIm9yaWdpbl9qdGkiOiIyYmJiMjExOC1hMzM3LTQ1YjgtOWI4ZC0yMzU5MTY5ZjdiOGYiLCJhdWQiOiI2cHJzbTUwZWZscG1vZzNwNjhtdGU1N2l2NiIsImV2ZW50X2lkIjoiMzkyODhlNjYtMWIyMi00ZjM0LTg5OTctMzFjNTliNzU1Mzc4IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MTgyNzUxMzcsInBob25lX251bWJlciI6Iis5MTYzNjk3OTc1NTQiLCJleHAiOjE3MTgyNzg3MzcsImlhdCI6MTcxODI3NTEzNywiZmFtaWx5X25hbWUiOiJVIiwianRpIjoiZGY4ZmVlYjYtY2EzNi00YTkzLTlhZWYtYjA1NGJjNDYyOWJhIiwiZW1haWwiOiJkaW5lc2hrdW1hckBpbm5vY2xvdWQuY28uaW4ifQ.GKmu9xMvRpx21p_4uITNj7JgjC2ec4-IGsbZZj_xnxX3-POF25nRXR32c9z5j1UxWl0mlQdI6yGONN-ndC9TGjc_hsBwLPjektKIXwE-d9nPF7ynULsHo8xBTitaFA-4qaL6q6MHYH54kfNHvjYe_k2BGMDYQv6sNmk-lu7AZ7Fd99CxvY7fhwh0MVH4v9b8HWpp9jLBETXYkygL_q7OX_xBGKCFEsuMex_bWIpHYRBsvQ5q2SM2uS7hy473n9d8tDTzwSGc9ndk7mufbHtvNS7wEO1vzddNNKNk7HMrs1H5ZJkbOuFz-gDMPSseFr9MoEuUOB5tcOmDNsdFSWlZog&quot;,&quot;NewDeviceMetadata&quot;:{&quot;DeviceGroupKey&quot;:&quot;749c9133-1aac-440d-afae-381e894bd744&quot;,&quot;DeviceKey&quot;:&quot;eu-west-2_2d9e467e-e1c5-4ff7-a2d1-9b746f111cad&quot;},&quot;RefreshToken&quot;:&quot;eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.DvqANr7onODGtvW0Z3MQRBULLYYD168dofbPQ3ceOjhLxsuslHhPCOwpNYuMFel932I8_CK3iEjJBzez2JA2VRwvqpOQLQ3l998HCx8W0-tctdmP5u51pBRxWt0MrW0TTRxC6RTpO9saN8jP4CDQs599FsWFVAUBkH08D0Uldd6iubs6-JSSq-rT92OL0eLcSAvBs5ZcwTCrhcROrEl-E2tbPiub3q2xS8RzyggW7PrX5keW8k-BB-vlRUuppUtoPyG2J57pGf9RLHFyB8zYBI38DA5jwCpIUOxXXbZoBL7Gb-Y5gBlvuGGWPHGmLUB0OgBs-aEX6uktn4orMyWwRg.olJW9vKlXaUCWXbw.AoAoCiAdQA7iT2zZd2wVeKpHSiVn9Un7k_STV4TJFOIkCYIbiQAupEG1DOs11tLE-w8MxmphLQFkqOWE0MO3BWbIgMjJgSKptLPyr-ew0Sr4-5cagy-vMGOboW2HEWSvpsRaYUY7WLexngxljngwCDvi2tGRxdO8zbKbRJ2CDgoAh45-0x4JWOYTBH3z0MqQGXI_xYAbypMiswfb790vomiNPTztyYLJy7PEruFjP3bsHCqmweV5OTu2Chw8juLtMvVBYnvMHR3RUXuIot81dSzTCVLtvAq1WMlZysZvEoVmw-UupV9m50oxJSjW6dBQg5M6MTbx8j7wazJeXOYw9aVDygvvRBVwDViel3-KeSk9NuZHdSy2fSPCDwJJSWFnlxrzksFnw9pLjLBix2TsrYzWhhdrsT730A2buOO6eMrgc7fge1Meu7gdrlWjiymyY1SZ6voVCBiJ6tbLTgBKReczKDvHRBVdovpVm-6aW-2_zLPnEJ8TkCitUOYIwqlTwGwbQZI_xdcIUprO_23-drxVHmqPcI0YXzQ4LP33SQ6DU8gWX4kSbym43zDs5YeItUHSN8IEsr0568pFaJ8dnP1QLupMsLVTjWG9w3CRa3dfI9VOoZN4-RWwCCZyvopA2MnWuJ6qDTtRFthvUoWV6Xlxcnt2npXnYqakZIp7J3SIJ3nh_CkefiCyGLoc_bpI-Qau2xT5sw95OEqTHIeMgYcIYjcuc0BzSa2-ABc9YnqMMcU6ctDXHoXhe3O-_7chQEJXU-8Y_sYcyopi1rgRKV89c95cYSG-VecoLh8WfGLjK_NUzCUKUOo8iusxegUKcM0Z0QWwVtBcWE8nS4qxI8tq1tGcFjyk1yTLkrsLFcUxPzd99cbr_BaNtGOIYMam-ubRtAxzu3R2w8EmUvHqMlf2c74UHcUyssbQQYnySNufs2srVjxqBS4yQMrnRCY5RWTSi9AQOmHTc8YI9432wCd6qoFUrmqZxCGDCxxTIiascKBA3HfixJNxly6_FjXnogF8HUVTvB37DfngGofhuahY7XOMGCXV_BvPMLdrrllzLjckwSSWkaqTv794p2rmmZuya3GJebzO6sJ0EvFuzEhlsOe2XZtC6nNcThR1opMHkZ79f-3mktWq9SCJw_p-K9mewPkcM-Jh24WIQ0mRgkfyF-Bqm50SH_eQwcM-B69uiAcWWpgXbibk5Y0PT0FiesGidXuZWTo9R9s92q_xAJwbB8HI7VYJTfGfZQDsrB6t3t-tvpGvVUZDBlLxAaPd5ZfHm0We6jnOmqXxdKCtnMN_uFzgEfLMvnJ8N5uOGP9ITz2vbm7xWSDtolMxrdzBbnCMqtzu6KYRwyn4GXG6gNGWJV-BbJdfwV6GJ6EfHpUU8vzWWzETZiodNR0dXYKSKrdrTvSlkIs2y36zj7_cPSRRQTJo9mkuXvL2l7N3._HDI28uie-5yZ009UvC_ig&quot;,&quot;TokenType&quot;:&quot;Bearer&quot;},&quot;ChallengeParameters&quot;:{}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.148">
+      <div class="step-ref passed">148</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.149">
+      <div class="step-ref passed">149</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.149">10:38:57.885 [print] {
+  &quot;AuthenticationResult&quot;: {
+    &quot;AccessToken&quot;: &quot;eyJraWQiOiJHYVFSaW8zNExCUlVSaUhwdlI2SExpKzU3ZXp4WkxJZWZ3VXJtR3ArOERZPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhNjQyYTI0NC03MDAxLTcwOTgtYzdjZC03M2I1NzgxNDI4ZWMiLCJkZXZpY2Vfa2V5IjoiZXUtd2VzdC0yXzJkOWU0NjdlLWUxYzUtNGZmNy1hMmQxLTliNzQ2ZjExMWNhZCIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5ldS13ZXN0LTIuYW1hem9uYXdzLmNvbVwvZXUtd2VzdC0yX1BsaGJYeEtCdyIsImNsaWVudF9pZCI6IjZwcnNtNTBlZmxwbW9nM3A2OG10ZTU3aXY2Iiwib3JpZ2luX2p0aSI6IjJiYmIyMTE4LWEzMzctNDViOC05YjhkLTIzNTkxNjlmN2I4ZiIsImV2ZW50X2lkIjoiMzkyODhlNjYtMWIyMi00ZjM0LTg5OTctMzFjNTliNzU1Mzc4IiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTcxODI3NTEzNywiZXhwIjoxNzE4Mjc4NzM3LCJpYXQiOjE3MTgyNzUxMzcsImp0aSI6IjMzNjc5N2MyLTMwMzgtNGQ3Ni05ZjViLWM1NDU0NTU2OGY3MyIsInVzZXJuYW1lIjoiYTY0MmEyNDQtNzAwMS03MDk4LWM3Y2QtNzNiNTc4MTQyOGVjIn0.Inilw5AwRb4QgOOWYcsIcd7IeFVMwYuEHJjAeyWuoJHS3uLPr4-dQOymj-mk0A9sltN1N2p_uXSDqDyFCoQCvn-ybusVKWvyrkS1l-uLmYys0FQs25nysGOqTSRT9LOQ7Ka1N0wX7hhVmpdA37wSfn_yETe0-W5s99-fld-XuTkofkKGFuJl9Ofw3Ge_5HC9tXxQy3nXQXlREqLYR0fmlgM4KnyRPhX8DNN2ZxAJfrOrUxKkEr_XCJtRAp6cs6B8nomRLjdVx0GUMUQgqLaRS_zS-l0gwSmTGLkbxGpk6o27LExOvQCw4RAJljxXXBWPbTfbOR85UwXfPqWzPjGzEg&quot;,
+    &quot;ExpiresIn&quot;: 3600,
+    &quot;IdToken&quot;: &quot;eyJraWQiOiIzRWxRZHdtSzlqaXZDaExyOVRZVzE0bHhoUmE1MXF1dkJpakF4TTRRZ2g4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhNjQyYTI0NC03MDAxLTcwOTgtYzdjZC03M2I1NzgxNDI4ZWMiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmV1LXdlc3QtMi5hbWF6b25hd3MuY29tXC9ldS13ZXN0LTJfUGxoYlh4S0J3IiwicGhvbmVfbnVtYmVyX3ZlcmlmaWVkIjp0cnVlLCJjb2duaXRvOnVzZXJuYW1lIjoiYTY0MmEyNDQtNzAwMS03MDk4LWM3Y2QtNzNiNTc4MTQyOGVjIiwiZ2l2ZW5fbmFtZSI6IkRpbmVzaCBLdW1hciIsIm9yaWdpbl9qdGkiOiIyYmJiMjExOC1hMzM3LTQ1YjgtOWI4ZC0yMzU5MTY5ZjdiOGYiLCJhdWQiOiI2cHJzbTUwZWZscG1vZzNwNjhtdGU1N2l2NiIsImV2ZW50X2lkIjoiMzkyODhlNjYtMWIyMi00ZjM0LTg5OTctMzFjNTliNzU1Mzc4IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MTgyNzUxMzcsInBob25lX251bWJlciI6Iis5MTYzNjk3OTc1NTQiLCJleHAiOjE3MTgyNzg3MzcsImlhdCI6MTcxODI3NTEzNywiZmFtaWx5X25hbWUiOiJVIiwianRpIjoiZGY4ZmVlYjYtY2EzNi00YTkzLTlhZWYtYjA1NGJjNDYyOWJhIiwiZW1haWwiOiJkaW5lc2hrdW1hckBpbm5vY2xvdWQuY28uaW4ifQ.GKmu9xMvRpx21p_4uITNj7JgjC2ec4-IGsbZZj_xnxX3-POF25nRXR32c9z5j1UxWl0mlQdI6yGONN-ndC9TGjc_hsBwLPjektKIXwE-d9nPF7ynULsHo8xBTitaFA-4qaL6q6MHYH54kfNHvjYe_k2BGMDYQv6sNmk-lu7AZ7Fd99CxvY7fhwh0MVH4v9b8HWpp9jLBETXYkygL_q7OX_xBGKCFEsuMex_bWIpHYRBsvQ5q2SM2uS7hy473n9d8tDTzwSGc9ndk7mufbHtvNS7wEO1vzddNNKNk7HMrs1H5ZJkbOuFz-gDMPSseFr9MoEuUOB5tcOmDNsdFSWlZog&quot;,
+    &quot;NewDeviceMetadata&quot;: {
+      &quot;DeviceGroupKey&quot;: &quot;749c9133-1aac-440d-afae-381e894bd744&quot;,
+      &quot;DeviceKey&quot;: &quot;eu-west-2_2d9e467e-e1c5-4ff7-a2d1-9b746f111cad&quot;
+    },
+    &quot;RefreshToken&quot;: &quot;eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.DvqANr7onODGtvW0Z3MQRBULLYYD168dofbPQ3ceOjhLxsuslHhPCOwpNYuMFel932I8_CK3iEjJBzez2JA2VRwvqpOQLQ3l998HCx8W0-tctdmP5u51pBRxWt0MrW0TTRxC6RTpO9saN8jP4CDQs599FsWFVAUBkH08D0Uldd6iubs6-JSSq-rT92OL0eLcSAvBs5ZcwTCrhcROrEl-E2tbPiub3q2xS8RzyggW7PrX5keW8k-BB-vlRUuppUtoPyG2J57pGf9RLHFyB8zYBI38DA5jwCpIUOxXXbZoBL7Gb-Y5gBlvuGGWPHGmLUB0OgBs-aEX6uktn4orMyWwRg.olJW9vKlXaUCWXbw.AoAoCiAdQA7iT2zZd2wVeKpHSiVn9Un7k_STV4TJFOIkCYIbiQAupEG1DOs11tLE-w8MxmphLQFkqOWE0MO3BWbIgMjJgSKptLPyr-ew0Sr4-5cagy-vMGOboW2HEWSvpsRaYUY7WLexngxljngwCDvi2tGRxdO8zbKbRJ2CDgoAh45-0x4JWOYTBH3z0MqQGXI_xYAbypMiswfb790vomiNPTztyYLJy7PEruFjP3bsHCqmweV5OTu2Chw8juLtMvVBYnvMHR3RUXuIot81dSzTCVLtvAq1WMlZysZvEoVmw-UupV9m50oxJSjW6dBQg5M6MTbx8j7wazJeXOYw9aVDygvvRBVwDViel3-KeSk9NuZHdSy2fSPCDwJJSWFnlxrzksFnw9pLjLBix2TsrYzWhhdrsT730A2buOO6eMrgc7fge1Meu7gdrlWjiymyY1SZ6voVCBiJ6tbLTgBKReczKDvHRBVdovpVm-6aW-2_zLPnEJ8TkCitUOYIwqlTwGwbQZI_xdcIUprO_23-drxVHmqPcI0YXzQ4LP33SQ6DU8gWX4kSbym43zDs5YeItUHSN8IEsr0568pFaJ8dnP1QLupMsLVTjWG9w3CRa3dfI9VOoZN4-RWwCCZyvopA2MnWuJ6qDTtRFthvUoWV6Xlxcnt2npXnYqakZIp7J3SIJ3nh_CkefiCyGLoc_bpI-Qau2xT5sw95OEqTHIeMgYcIYjcuc0BzSa2-ABc9YnqMMcU6ctDXHoXhe3O-_7chQEJXU-8Y_sYcyopi1rgRKV89c95cYSG-VecoLh8WfGLjK_NUzCUKUOo8iusxegUKcM0Z0QWwVtBcWE8nS4qxI8tq1tGcFjyk1yTLkrsLFcUxPzd99cbr_BaNtGOIYMam-ubRtAxzu3R2w8EmUvHqMlf2c74UHcUyssbQQYnySNufs2srVjxqBS4yQMrnRCY5RWTSi9AQOmHTc8YI9432wCd6qoFUrmqZxCGDCxxTIiascKBA3HfixJNxly6_FjXnogF8HUVTvB37DfngGofhuahY7XOMGCXV_BvPMLdrrllzLjckwSSWkaqTv794p2rmmZuya3GJebzO6sJ0EvFuzEhlsOe2XZtC6nNcThR1opMHkZ79f-3mktWq9SCJw_p-K9mewPkcM-Jh24WIQ0mRgkfyF-Bqm50SH_eQwcM-B69uiAcWWpgXbibk5Y0PT0FiesGidXuZWTo9R9s92q_xAJwbB8HI7VYJTfGfZQDsrB6t3t-tvpGvVUZDBlLxAaPd5ZfHm0We6jnOmqXxdKCtnMN_uFzgEfLMvnJ8N5uOGP9ITz2vbm7xWSDtolMxrdzBbnCMqtzu6KYRwyn4GXG6gNGWJV-BbJdfwV6GJ6EfHpUU8vzWWzETZiodNR0dXYKSKrdrTvSlkIs2y36zj7_cPSRRQTJo9mkuXvL2l7N3._HDI28uie-5yZ009UvC_ig&quot;,
+    &quot;TokenType&quot;: &quot;Bearer&quot;
+  },
+  &quot;ChallengeParameters&quot;: {
+  }
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.151">
+      <div class="step-ref passed">151</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.AuthenticationResult.AccessToken == &quot;#string&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.152">
+      <div class="step-ref passed">152</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.AuthenticationResult.ExpiresIn == 3600</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.153">
+      <div class="step-ref passed">153</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.AuthenticationResult.IdToken == &quot;#string&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.154">
+      <div class="step-ref passed">154</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.AuthenticationResult.NewDeviceMetadata.DeviceGroupKey == &quot;#string&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.155">
+      <div class="step-ref passed">155</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.AuthenticationResult.NewDeviceMetadata.DeviceKey == &quot;#string&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.156">
+      <div class="step-ref passed">156</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.AuthenticationResult.RefreshToken == &quot;#string&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.157">
+      <div class="step-ref passed">157</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.AuthenticationResult.TokenType == &quot;Bearer&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.158">
+      <div class="step-ref passed">158</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.ChallengeParameters == {}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
