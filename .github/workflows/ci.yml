@@ -33,8 +33,8 @@ jobs:
     - name: Run Karate tests
       run: mvn test -DinnoCloudPostServices=https://cognito-idp.eu-west-2.amazonaws.com/ -DclientId=6prsm50eflpmog3p68mte57iv6 -Dusername=dineshkumar@innocloud.co.in -Dpassword=Dlb0907@@@ || echo suppress-exit-code
 
-    - name: Generate coverage report
-      run: mvn jacoco:report
+    # - name: Generate coverage report
+    #   run: mvn jacoco:report
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
