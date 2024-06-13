@@ -66,4 +66,4 @@ jobs:
 
     - name: Output Report Link
       if: github.event_name != 'pull_request'
-      run: echo "Karate UI Test Report:https://${{ github.repository_owner }}.github.io/${{ github.repository }}/karate-reports/karate-summary.html?${{ steps.vars.outputs.sha }}"
+      run: echo "Karate UI Test Report::https://${{ github.repository_owner }}.github.io/${{ github.repository }}/karate-reports/karate-summary.html?${{ steps.vars.outputs.sha }}"
