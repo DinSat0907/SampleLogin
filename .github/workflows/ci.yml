@@ -43,7 +43,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: karate-reports
-        path: target/karate-reports
+        path: target/karate-reports/*.html
 
     # - name: Upload coverage to Codecov
     #   uses: codecov/codecov-action@v1
