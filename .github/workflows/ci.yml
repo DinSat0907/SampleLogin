@@ -33,14 +33,37 @@ jobs:
     - name: Run Karate tests
       run: mvn test -Demail=dineshkumar@innocloud.co.in -Dpassword=Dlb0907@@@ -Dheadless=--headless=new
 
-    - name: Archive test results
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-results
-        path: target/surefire-reports/*.xml
+    # - name: Archive test results
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: test-results
+    #     path: target/surefire-reports/*.xml
 
     - name: Archive Karate reports
       uses: actions/upload-artifact@v2
       with:
         name: karate-reports
         path: target/karate-reports/*.html
+
+    - name: Upload Karate reports to Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./target/karate-reports
+
+    - name: Get Commit SHA
+      id: vars
+      run: echo "::set-output name=sha::${GITHUB_SHA}"
+
+    - name: Comment on Pull Request
+      if: github.event_name == 'pull_request'
+      uses: peter-evans/create-or-update-comment@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        issue-number: ${{ github.event.pull_request.number }}
+        body: |
+          Karate UI Test Report: [View Report](https://${{ github.repository_owner }}.github.io/${{ github.repository }}/karate-reports/karate-summary.html?${{ steps.vars.outputs.sha }})
+
+    - name: Output Report Link
+      if: github.event_name != 'pull_request'
+      run: "https://${{ github.repository_owner }}.github.io/${{ github.repository }}/karate-reports/karate-summary.html?${{ steps.vars.outputs.sha }}"
