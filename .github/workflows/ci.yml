@@ -48,7 +48,6 @@ jobs:
     - name: Upload Karate reports to Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./target/karate-reports
 
     - name: Get Commit SHA
@@ -66,4 +65,4 @@ jobs:
 
     - name: Output Report Link
       if: github.event_name != 'pull_request'
-      run: "https://${{ github.repository_owner }}.github.io/${{ github.repository }}/karate-reports/karate-summary.html?${{ steps.vars.outputs.sha }}"
+      run: "Karate UI Test Report: https://${{ github.repository_owner }}.github.io/${{ github.repository }}/karate-reports/karate-summary.html?${{ steps.vars.outputs.sha }}"
