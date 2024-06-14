@@ -51,7 +51,7 @@ jobs:
         pip install flake8 pytest pytest-cov
     - name: Run tests
       run: |
-        pytest --cov=./
+        mvn test -DinnoCloudPostServices=https://cognito-idp.eu-west-2.amazonaws.com/ -DclientId=6prsm50eflpmog3p68mte57iv6 -Dusername=dineshkumar@innocloud.co.in -Dpassword=Dlb0907@@@
 
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v4.0.1
