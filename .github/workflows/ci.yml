@@ -31,7 +31,7 @@ jobs:
           ${{ runner.os }}-maven-
 
     - name: Run Karate tests
-      run: mvn test -DinnoCloudPostServices=https://cognito-idp.eu-west-2.amazonaws.com/ -DclientId=6prsm50eflpmog3p68mte57iv6 -Dusername=dineshkumar@innocloud.co.in -Dpassword=Dlb0907@@@ || echo suppress-exit-code
+      run: mvn test -DinnoCloudPostServices=https://cognito-idp.eu-west-2.amazonaws.com/ -DclientId=6prsm50eflpmog3p68mte57iv6 -Dusername=dineshkumar@innocloud.co.in -Dpassword=Dlb0907@@@
 
     - name: Archive test results
       uses: actions/upload-artifact@v2
