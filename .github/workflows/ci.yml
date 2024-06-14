@@ -26,9 +26,6 @@ jobs:
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
         restore-keys: |
           ${{ runner.os }}-maven-
-          
-    - name: Install dependencies
-      run: mvn install
       
     - name: Run Karate tests
       run: mvn test -DinnoCloudPostServices=https://cognito-idp.eu-west-2.amazonaws.com/ -DclientId=6prsm50eflpmog3p68mte57iv6 -Dusername=dineshkumar@innocloud.co.in -Dpassword=Dlb0907@@@
