@@ -34,13 +34,13 @@ jobs:
       run: mvn test -DinnoCloudPostServices=https://cognito-idp.eu-west-2.amazonaws.com/ -DclientId=6prsm50eflpmog3p68mte57iv6 -Dusername=dineshkumar@innocloud.co.in -Dpassword=Dlb0907@@@
 
     - name: Archive test results
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: test-results
         path: target/surefire-reports/*.xml
 
     - name: Archive Karate reports
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: karate-reports
         path: target/karate-reports/*.html
