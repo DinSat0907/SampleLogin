@@ -1,59 +1,36 @@
-name: Karate UI Tests
+name: CI
 
 on:
-  workflow_dispatch:
-
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  karate-tests:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Set up JDK 21
+    - uses: actions/checkout@v2
+    
+    - name: Set up JDK
       uses: actions/setup-java@v2
       with:
         distribution: 'adopt'
-        java-version: '21'
-
-    - name: Cache Maven packages
-      uses: actions/cache@v2
-      with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-maven-
-
+        java-version: '11'
+    
+    - name: Install dependencies
+      run: mvn install
+      
     - name: Run Karate tests
       run: mvn test -DinnoCloudPostServices=https://cognito-idp.eu-west-2.amazonaws.com/ -DclientId=6prsm50eflpmog3p68mte57iv6 -Dusername=dineshkumar@innocloud.co.in -Dpassword=Dlb0907@@@
+ 
+    - name: Generate coverage report
+      run: mvn jacoco:report
 
-    - name: Archive test results
-      uses: actions/upload-artifact@v4
-      with:
-        name: test-results
-        path: target/surefire-reports/*.xml
-
-    - name: Archive Karate reports
-      uses: actions/upload-artifact@v4
-      with:
-        name: karate-reports
-        path: target/karate-reports/*.html
-        
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.8'
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install flake8 pytest pytest-cov
-    - name: Run tests
-      run: |
-        mvn test -DinnoCloudPostServices=https://cognito-idp.eu-west-2.amazonaws.com/ -DclientId=6prsm50eflpmog3p68mte57iv6 -Dusername=dineshkumar@innocloud.co.in -Dpassword=Dlb0907@@@
-
-    - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v4.0.1
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v4
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
+        files: target/site/jacoco/jacoco.xml
+        fail_ci_if_error: true
