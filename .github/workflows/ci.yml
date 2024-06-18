@@ -36,7 +36,7 @@ jobs:
     - name: Run tests and collect coverage
       run: mvn -B test -DinnoCloudPostServices=https://cognito-idp.eu-west-2.amazonaws.com/ -DclientId=6prsm50eflpmog3p68mte57iv6 -Dusername=dineshkumar@innocloud.co.in -Dpassword=Dlb0907@@@
 
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v4
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_ORG_TOKEN }}
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v4.0.1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
